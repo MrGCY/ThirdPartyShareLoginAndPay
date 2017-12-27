@@ -8,6 +8,7 @@
 
 #import "CYPurchaseViewController.h"
 #import <StoreKit/StoreKit.h>
+#import "PuchaseTool.h"
 typedef NS_ENUM(NSInteger,buyCoinsTag) {
     buyCoinsTagNone,
     buyCoinsTagIAPp12,
@@ -25,7 +26,7 @@ typedef NS_ENUM(NSInteger,buyCoinsTag) {
 #define ProductID_IAPp98 @"com.quzhua.app4" //98
 #define ProductID_IAPp488 @"com.quzhua.app5" //488
 #define ProductID_IAPp998 @"com.quzhua.app6" //998
-@interface CYPurchaseViewController ()<SKPaymentTransactionObserver,SKProductsRequestDelegate >
+@interface CYPurchaseViewController ()<PuchaseToolDelegate>
 {
     buyCoinsTag buyType;
     buyCoinsTag selectBuyType;
@@ -38,6 +39,7 @@ typedef NS_ENUM(NSInteger,buyCoinsTag) {
 @property (assign, nonatomic) NSInteger selectPrice;
 //订单号
 @property (copy, nonatomic) NSString * orderId;
+@property (strong, nonatomic) PuchaseTool * puchaseTool;
 @end
 
 @implementation CYPurchaseViewController
@@ -47,8 +49,16 @@ typedef NS_ENUM(NSInteger,buyCoinsTag) {
     [self setupSubviews];
     [self setupData];
 }
+#pragma mark- 懒加载数据
+-(PuchaseTool *)puchaseTool{
+    if (!_puchaseTool) {
+        _puchaseTool = [PuchaseTool shareInstance];
+        _puchaseTool.delegate = self;
+    }
+    return _puchaseTool;
+}
 -(void)setupSubviews{
-    [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    [self.puchaseTool addTransactionObserver];
 }
 -(void)setupData{
     selectBuyType = buyCoinsTagNone;
@@ -143,7 +153,7 @@ typedef NS_ENUM(NSInteger,buyCoinsTag) {
 -(void)buy:(int)type
 {
     buyType = type;
-    if ([SKPaymentQueue canMakePayments]) {
+    if ([self.puchaseTool canPay]) {
         [self RequestProductData];
         NSLog(@"允许程序内付费购买");
     }else{
@@ -182,186 +192,43 @@ typedef NS_ENUM(NSInteger,buyCoinsTag) {
         default:
             break;
     }
-    NSSet *nsset = [NSSet setWithArray:product];
-    SKProductsRequest *request=[[SKProductsRequest alloc] initWithProductIdentifiers: nsset];
-    request.delegate=self;
-    [request start];
+    [self.puchaseTool requestProductInfoWithProductArray:product];
 }
-//<SKProductsRequestDelegate> 请求协议
-//收到的产品信息
-- (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
+#pragma mark- PuchaseToolDelegate
+-(void)puchaseRestoredWithUpdatedTransactions:(NSArray *)transactions{
+    self.isFinishPay = YES;
+    NSLog(@"-----已经购买过该商品 --------");
+}
+-(void)puchaseFailWithUpdatedTransactions:(NSArray *)transactions{
+    self.isFinishPay = YES;
+    NSLog(@"-----交易失败 --------");
+    UIAlertView *alerView2 =  [[UIAlertView alloc] initWithTitle:@"提示"
+                                                         message:@"购买失败，请重新尝试购买"
+                                                        delegate:nil cancelButtonTitle:NSLocalizedString(@"关闭",nil) otherButtonTitles:nil];
     
-    NSLog(@"-----------收到产品反馈信息--------------");
-    NSArray *myProduct = response.products;
-    NSLog(@"产品Product ID:%@",response.invalidProductIdentifiers);
-    NSLog(@"产品付费数量: %d", (int)[myProduct count]);
-    // populate UI
-    for(SKProduct *product in myProduct){
-        NSLog(@"product info");
-        NSLog(@"SKProduct 描述信息%@", [product description]);
-        NSLog(@"产品标题 %@" , product.localizedTitle);
-        NSLog(@"产品描述信息: %@" , product.localizedDescription);
-        NSLog(@"价格: %@" , product.price);
-        NSLog(@"Product id: %@" , product.productIdentifier);
-    }
-    SKPayment *payment = [SKPayment paymentWithProduct:(SKProduct *)myProduct.firstObject];
-    NSLog(@"---------发送购买请求------------");
-    [[SKPaymentQueue defaultQueue] addPayment:payment];
+    [alerView2 show];
+}
+-(void)puchaseSuccessWithUpdatedTransactions:(NSArray *)transactions{
+    self.isFinishPay = YES;
+    NSLog(@"-----交易完成 --------");
+    UIAlertView *alerView =  [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"购买成功"
+                                                       delegate:nil cancelButtonTitle:NSLocalizedString(@"关闭",nil) otherButtonTitles:nil];
     
+    [alerView show];
+    self.coinLabel.text = [NSString stringWithFormat:@"%zd",self.selectPrice];
 }
-- (void)requestProUpgradeProductData
-{
-    NSLog(@"------请求升级数据---------");
-    NSSet *productIdentifiers = [NSSet setWithObject:@"com.productid"];
-    SKProductsRequest* productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
-    productsRequest.delegate = self;
-    [productsRequest start];
-}
-//弹出错误信息
-- (void)request:(SKRequest *)request didFailWithError:(NSError *)error{
+-(void)puchaseRequestFailWithError:(NSError *)error{
     NSLog(@"-------弹出错误信息----------");
     UIAlertView *alerView =  [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Alert",NULL) message:[error localizedDescription]
                                                        delegate:nil cancelButtonTitle:NSLocalizedString(@"Close",nil) otherButtonTitles:nil];
     [alerView show];
-    
 }
--(void) requestDidFinish:(SKRequest *)request
-{
+-(void)puchaseRequestFinish{
     NSLog(@"----------反馈信息结束--------------");
-}
--(void) PurchasedTransaction: (SKPaymentTransaction *)transaction{
-    NSLog(@"-----PurchasedTransaction----");
-    NSArray *transactions =[[NSArray alloc] initWithObjects:transaction, nil];
-    [self paymentQueue:[SKPaymentQueue defaultQueue] updatedTransactions:transactions];
-}
-
-//<SKPaymentTransactionObserver> 千万不要忘记绑定，代码如下：
-//----监听购买结果
-//[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
-
-- (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions//交易结果
-{
-    NSLog(@"-----paymentQueue--------");
-    self.isFinishPay = YES;
-    for (SKPaymentTransaction *transaction in transactions)
-    {
-        switch (transaction.transactionState)
-        {
-            case SKPaymentTransactionStatePurchased:{//交易完成
-                [self completeTransaction:transaction];
-                NSLog(@"-----交易完成 --------");
-                UIAlertView *alerView =  [[UIAlertView alloc] initWithTitle:@""
-                                                                    message:@"购买成功"
-                                                                   delegate:nil cancelButtonTitle:NSLocalizedString(@"关闭",nil) otherButtonTitles:nil];
-
-                [alerView show];
-                self.coinLabel.text = [NSString stringWithFormat:@"%zd",self.selectPrice];
-            } break;
-            case SKPaymentTransactionStateFailed://交易失败
-            {
-                [self failedTransaction:transaction];
-                NSLog(@"-----交易失败 --------");
-                UIAlertView *alerView2 =  [[UIAlertView alloc] initWithTitle:@"提示"
-                                                                     message:@"购买失败，请重新尝试购买"
-                                                                    delegate:nil cancelButtonTitle:NSLocalizedString(@"关闭",nil) otherButtonTitles:nil];
-
-                [alerView2 show];
-                
-            }break;
-            case SKPaymentTransactionStateRestored://已经购买过该商品
-                [self restoreTransaction:transaction];
-                NSLog(@"-----已经购买过该商品 --------");
-                break;
-            case SKPaymentTransactionStatePurchasing:      //商品添加进列表
-                NSLog(@"-----商品添加进列表 --------");
-                break;
-            default:
-                break;
-        }
-    }
-}
-//-----------------------购买成功-----------------
-- (void) completeTransaction: (SKPaymentTransaction *)transaction
-{
-    NSLog(@"-----completeTransaction--------");
-    // Your application should implement these two methods.
-    NSString *product = transaction.payment.productIdentifier;
-    if ([product length] > 0) {
-        NSArray *tt = [product componentsSeparatedByString:@"."];
-        NSString *bookid = [tt lastObject];
-        if ([bookid length] > 0) {
-            [self recordTransaction:bookid];
-            [self provideContent:bookid];
-        }
-    }
-    // Remove the transaction from the payment queue.
-    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
-}
-//记录交易
--(void)recordTransaction:(NSString *)product{
-    NSLog(@"-----记录交易--------");
-}
-
-//处理下载内容
--(void)provideContent:(NSString *)product{
-    NSLog(@"-----下载--------");
-}
-//--------------------购买失败------------------
-- (void) failedTransaction: (SKPaymentTransaction *)transaction{
-    NSLog(@"失败");
-    if (transaction.error.code != SKErrorPaymentCancelled){
-        
-    }
-    [[SKPaymentQueue defaultQueue] finishTransaction: transaction];
-    
-}
--(void) paymentQueueRestoreCompletedTransactionsFinished: (SKPaymentTransaction *)transaction{
-    
-}
-//--------------------已经都买过了------------------
-- (void) restoreTransaction: (SKPaymentTransaction *)transaction
-{
-    NSLog(@"交易恢复处理");
-    
-}
--(void) paymentQueue:(SKPaymentQueue *) paymentQueue restoreCompletedTransactionsFailedWithError:(NSError *)error{
-    NSLog(@"-------paymentQueue----");
-}
-#pragma mark connection delegate
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    NSLog(@"%@",  [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-}
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection{
-    
-}
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
-    switch([(NSHTTPURLResponse *)response statusCode]) {
-        case 200:
-        case 206:
-            break;
-        case 304:
-            break;
-        case 400:
-            break;
-        case 404:
-            break;
-        case 416:
-            break;
-        case 403:
-            break;
-        case 401:
-        case 500:
-            break;
-        default:
-            break;
-    }
-}
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    NSLog(@"test");
 }
 -(void)dealloc
 {
-    [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];//解除监听
+    [self.puchaseTool removeTransactionObserver];//解除监听
 }
 @end
