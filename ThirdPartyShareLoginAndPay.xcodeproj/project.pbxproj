@@ -15,6 +15,15 @@
 		7E66E5A01FF334D9006E4245 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E59F1FF334D9006E4245 /* main.m */; };
 		7E66E5AA1FF334D9006E4245 /* ThirdPartyShareLoginAndPayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5A91FF334D9006E4245 /* ThirdPartyShareLoginAndPayTests.m */; };
 		7E66E5B51FF334D9006E4245 /* ThirdPartyShareLoginAndPayUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5B41FF334D9006E4245 /* ThirdPartyShareLoginAndPayUITests.m */; };
+		7E66E5C71FF343E6006E4245 /* CYMainTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5C61FF343E6006E4245 /* CYMainTabBarViewController.m */; };
+		7E66E5CA1FF34404006E4245 /* CYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5C91FF34404006E4245 /* CYBaseViewController.m */; };
+		7E66E5CD1FF34438006E4245 /* CYBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5CC1FF34438006E4245 /* CYBaseNavigationViewController.m */; };
+		7E66E5D61FF344C7006E4245 /* CYShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5D41FF344C7006E4245 /* CYShareViewController.m */; };
+		7E66E5D71FF344C7006E4245 /* CYShareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E5D51FF344C7006E4245 /* CYShareViewController.xib */; };
+		7E66E5DC1FF34513006E4245 /* CYPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5DA1FF34513006E4245 /* CYPayViewController.m */; };
+		7E66E5DD1FF34513006E4245 /* CYPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E5DB1FF34513006E4245 /* CYPayViewController.xib */; };
+		7E66E5E21FF34545006E4245 /* CYPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5E01FF34545006E4245 /* CYPurchaseViewController.m */; };
+		7E66E5E31FF34545006E4245 /* CYPurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E5E11FF34545006E4245 /* CYPurchaseViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,21 @@
 		7E66E5B01FF334D9006E4245 /* ThirdPartyShareLoginAndPayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThirdPartyShareLoginAndPayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E66E5B41FF334D9006E4245 /* ThirdPartyShareLoginAndPayUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyShareLoginAndPayUITests.m; sourceTree = "<group>"; };
 		7E66E5B61FF334D9006E4245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E66E5C51FF343E6006E4245 /* CYMainTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYMainTabBarViewController.h; sourceTree = "<group>"; };
+		7E66E5C61FF343E6006E4245 /* CYMainTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYMainTabBarViewController.m; sourceTree = "<group>"; };
+		7E66E5C81FF34404006E4245 /* CYBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYBaseViewController.h; sourceTree = "<group>"; };
+		7E66E5C91FF34404006E4245 /* CYBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYBaseViewController.m; sourceTree = "<group>"; };
+		7E66E5CB1FF34438006E4245 /* CYBaseNavigationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYBaseNavigationViewController.h; sourceTree = "<group>"; };
+		7E66E5CC1FF34438006E4245 /* CYBaseNavigationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYBaseNavigationViewController.m; sourceTree = "<group>"; };
+		7E66E5D31FF344C7006E4245 /* CYShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYShareViewController.h; sourceTree = "<group>"; };
+		7E66E5D41FF344C7006E4245 /* CYShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYShareViewController.m; sourceTree = "<group>"; };
+		7E66E5D51FF344C7006E4245 /* CYShareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYShareViewController.xib; sourceTree = "<group>"; };
+		7E66E5D91FF34513006E4245 /* CYPayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYPayViewController.h; sourceTree = "<group>"; };
+		7E66E5DA1FF34513006E4245 /* CYPayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYPayViewController.m; sourceTree = "<group>"; };
+		7E66E5DB1FF34513006E4245 /* CYPayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYPayViewController.xib; sourceTree = "<group>"; };
+		7E66E5DF1FF34545006E4245 /* CYPurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYPurchaseViewController.h; sourceTree = "<group>"; };
+		7E66E5E01FF34545006E4245 /* CYPurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYPurchaseViewController.m; sourceTree = "<group>"; };
+		7E66E5E11FF34545006E4245 /* CYPurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYPurchaseViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +154,8 @@
 		7E66E5C21FF33510006E4245 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7E66E5CE1FF34441006E4245 /* Section */,
+				7E66E5C41FF34387006E4245 /* Main */,
 				7E66E5C31FF3351A006E4245 /* Others */,
 			);
 			path = Classes;
@@ -146,6 +172,83 @@
 				7E66E59F1FF334D9006E4245 /* main.m */,
 			);
 			path = Others;
+			sourceTree = "<group>";
+		};
+		7E66E5C41FF34387006E4245 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5C51FF343E6006E4245 /* CYMainTabBarViewController.h */,
+				7E66E5C61FF343E6006E4245 /* CYMainTabBarViewController.m */,
+				7E66E5C81FF34404006E4245 /* CYBaseViewController.h */,
+				7E66E5C91FF34404006E4245 /* CYBaseViewController.m */,
+				7E66E5CB1FF34438006E4245 /* CYBaseNavigationViewController.h */,
+				7E66E5CC1FF34438006E4245 /* CYBaseNavigationViewController.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E66E5CE1FF34441006E4245 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5D11FF34479006E4245 /* Purchase */,
+				7E66E5D01FF3445F006E4245 /* Pay */,
+				7E66E5CF1FF34457006E4245 /* Share */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		7E66E5CF1FF34457006E4245 /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5D21FF3449B006E4245 /* Controller */,
+			);
+			path = Share;
+			sourceTree = "<group>";
+		};
+		7E66E5D01FF3445F006E4245 /* Pay */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5D81FF344FF006E4245 /* Controller */,
+			);
+			path = Pay;
+			sourceTree = "<group>";
+		};
+		7E66E5D11FF34479006E4245 /* Purchase */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5DE1FF34518006E4245 /* Controller */,
+			);
+			path = Purchase;
+			sourceTree = "<group>";
+		};
+		7E66E5D21FF3449B006E4245 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5D31FF344C7006E4245 /* CYShareViewController.h */,
+				7E66E5D41FF344C7006E4245 /* CYShareViewController.m */,
+				7E66E5D51FF344C7006E4245 /* CYShareViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7E66E5D81FF344FF006E4245 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5D91FF34513006E4245 /* CYPayViewController.h */,
+				7E66E5DA1FF34513006E4245 /* CYPayViewController.m */,
+				7E66E5DB1FF34513006E4245 /* CYPayViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7E66E5DE1FF34518006E4245 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5DF1FF34545006E4245 /* CYPurchaseViewController.h */,
+				7E66E5E01FF34545006E4245 /* CYPurchaseViewController.m */,
+				7E66E5E11FF34545006E4245 /* CYPurchaseViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +357,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E66E5DD1FF34513006E4245 /* CYPayViewController.xib in Resources */,
+				7E66E5D71FF344C7006E4245 /* CYShareViewController.xib in Resources */,
 				7E66E59D1FF334D9006E4245 /* LaunchScreen.storyboard in Resources */,
 				7E66E59A1FF334D9006E4245 /* Assets.xcassets in Resources */,
 				7E66E5981FF334D9006E4245 /* Main.storyboard in Resources */,
+				7E66E5E31FF34545006E4245 /* CYPurchaseViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,9 +387,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E66E5D61FF344C7006E4245 /* CYShareViewController.m in Sources */,
+				7E66E5CD1FF34438006E4245 /* CYBaseNavigationViewController.m in Sources */,
 				7E66E5951FF334D9006E4245 /* ViewController.m in Sources */,
 				7E66E5A01FF334D9006E4245 /* main.m in Sources */,
+				7E66E5E21FF34545006E4245 /* CYPurchaseViewController.m in Sources */,
 				7E66E5921FF334D9006E4245 /* AppDelegate.m in Sources */,
+				7E66E5DC1FF34513006E4245 /* CYPayViewController.m in Sources */,
+				7E66E5C71FF343E6006E4245 /* CYMainTabBarViewController.m in Sources */,
+				7E66E5CA1FF34404006E4245 /* CYBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +563,7 @@
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -466,7 +578,7 @@
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
