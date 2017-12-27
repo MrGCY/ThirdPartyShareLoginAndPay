@@ -367,7 +367,7 @@ NSString * const PARTNER_ID = @"w12we34rt56yu78io90pasdfghjklzxc";
 #warning 需要开发调用自己的登录接口
     [self loginSuccess:params];
 }
-//微信支付
+#pragma mark - 微信支付  需要服务端下单 给客户端 prepayId
 - (void)wxPayWithPrepayId:(NSString *)prepayId andPayResponse:(PayResponseBlock)payReponse{
     self.payResponseBlock = payReponse;
     payRequsestHandler *req = [payRequsestHandler alloc];
@@ -375,9 +375,10 @@ NSString * const PARTNER_ID = @"w12we34rt56yu78io90pasdfghjklzxc";
     [req setKey:PARTNER_ID];
     [req payWithPrepareParams:[req getSignParamsWithPrepareID:prepayId]];
 }
-#pragma mark - 微信支付
-- (void)weChatPayOrderTitle:(NSString *)title andAttach:(NSString *)attach andPrice:(NSString *)price
+#pragma mark - 微信支付  不需要服务端下单  客户端进行下单并支付
+- (void)weChatPayOrderTitle:(NSString *)title andAttach:(NSString *)attach andPrice:(NSString *)price andPayResponse:(PayResponseBlock)payReponse
 {
+    self.payResponseBlock = payReponse;
     NSLog(@"++++++++++++跳到微信支付页面");
     if([WXApi isWXAppInstalled]){
         WeChatOrder *order = [[WeChatOrder alloc] init];

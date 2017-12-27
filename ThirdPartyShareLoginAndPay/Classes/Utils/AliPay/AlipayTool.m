@@ -12,7 +12,7 @@
 #import "APRSASigner.h"
 #import <AlipaySDK/AlipaySDK.h>
 //应用注册scheme,在AlixPayDemo-Info.plist定义URL types
-static NSString * const appScheme = @"quzhaApp";
+static NSString * const appScheme = @"ThirdPartyApp";
 //商户签约id
 static NSString * const alipayPid = @"";
 //注册的appID

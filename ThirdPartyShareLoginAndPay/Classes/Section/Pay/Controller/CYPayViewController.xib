@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +19,39 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34g-0B-A3p">
+                    <rect key="frame" x="140.5" y="120" width="94" height="22"/>
+                    <state key="normal" title="微信支付" image="pay_weixin">
+                        <color key="titleColor" red="0.96862745100000003" green="0.57647058819999997" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickWeixinPayEvent:" destination="-1" eventType="touchUpInside" id="7g2-1i-rCU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMc-vy-abj">
+                    <rect key="frame" x="131.5" y="192" width="112" height="22"/>
+                    <state key="normal" title="支付宝支付" image="pay_zhifubao">
+                        <color key="titleColor" red="0.96862745100000003" green="0.57647058819999997" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="clickAliPayEvent:" destination="-1" eventType="touchUpInside" id="rNl-Mm-apE"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TMc-vy-abj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6i3-w6-Zaz"/>
+                <constraint firstItem="34g-0B-A3p" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="a5a-Fd-ulO"/>
+                <constraint firstItem="34g-0B-A3p" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="100" id="h2u-AG-oZh"/>
+                <constraint firstItem="TMc-vy-abj" firstAttribute="top" secondItem="34g-0B-A3p" secondAttribute="bottom" constant="50" id="hyc-Tc-D9g"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-254" y="152"/>
         </view>
     </objects>
+    <resources>
+        <image name="pay_weixin" width="20" height="20"/>
+        <image name="pay_zhifubao" width="20" height="20"/>
+    </resources>
 </document>

@@ -32,9 +32,10 @@ typedef void (^PayResponseBlock)(BOOL success,NSString *message,int type);
 - (void)thirdPartyApplication:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions;
 - (BOOL)thirdPartyApplicationOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation;
 - (BOOL)thirdPartyApplicationHandleOpenURL:(NSURL *)url;
-//微信支付
+
+//----------微信支付
 - (void)wxPayWithPrepayId:(NSString *)prepayId andPayResponse:(PayResponseBlock)payReponse;
-- (void)weChatPayOrderTitle:(NSString *)title andAttach:(NSString *)attach andPrice:(NSString *)price;
+- (void)weChatPayOrderTitle:(NSString *)title andAttach:(NSString *)attach andPrice:(NSString *)price andPayResponse:(PayResponseBlock)payReponse;
 // Get IP Address
 +(NSString *)getIPAddress;
 @end

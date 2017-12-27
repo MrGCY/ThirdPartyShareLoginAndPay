@@ -7,7 +7,8 @@
 //
 
 #import "CYPayViewController.h"
-
+#import "AlipayTool.h"
+#import "ThirdPartyLoginAndShareManager.h"
 @interface CYPayViewController ()
 
 @end
@@ -16,22 +17,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)clickWeixinPayEvent:(UIButton *)sender {
+    WEAKSELF
+    [[ThirdPartyLoginAndShareManager sharedInstance] weChatPayOrderTitle:@"礼物" andAttach:@"购买礼物" andPrice:@"1" andPayResponse:^(BOOL success, NSString *message, int type) {
+        STRONGSELFFor(weakSelf);
+        if (success) {
+            [strongSelf showHUDHintWithText:@"支付成功"];
+        }else{
+            [strongSelf showHUDHintWithText:message];
+        }
+    }];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)clickAliPayEvent:(UIButton *)sender {
+    WEAKSELF
+    [[AlipayTool alipayTool] alipayWithPrice:@"0.01" andTitle:@"礼物" andDesc:@"购买礼物" andTradeNo:[AlipayTool generateTradeNO] success:^(NSDictionary *resultDic) {
+        NSLog(@"支付成功 ---- %@",resultDic);
+        STRONGSELFFor(weakSelf);
+        [strongSelf showHUDHintWithText:@"支付成功"];
+    } failBlock:^(NSDictionary *resultDic, NSString *message) {
+        NSLog(@"支付失败 ---- %@",resultDic);
+        STRONGSELFFor(weakSelf);
+        [strongSelf showHUDHintWithText:message];
+    }];
 }
-*/
 
 @end
