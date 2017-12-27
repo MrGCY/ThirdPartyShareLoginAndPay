@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "CYMainTabBarViewController.h"
 #import "ThirdPartyLoginAndShareManager.h"
-
+#import "AlipayTool.h"
 @interface AppDelegate ()
 
 @end
@@ -29,12 +29,12 @@
 #pragma mark --------------------三方登录分享相关---------------------------------
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
 {
-//    [AlipayTool Alipay_application:application openURL:url sourceApplication:sourceApplication annotation:application];
+    [AlipayTool Alipay_application:application openURL:url sourceApplication:sourceApplication annotation:application];
     return [[ThirdPartyLoginAndShareManager sharedInstance] thirdPartyApplicationOpenURL:url sourceApplication:sourceApplication annotation:annotation];
 }
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
-//    [AlipayTool Alipay_application:application handleOpenURL:url];
+    [AlipayTool Alipay_application:application handleOpenURL:url];
     return [[ThirdPartyLoginAndShareManager sharedInstance] thirdPartyApplicationHandleOpenURL:url];
     
 }

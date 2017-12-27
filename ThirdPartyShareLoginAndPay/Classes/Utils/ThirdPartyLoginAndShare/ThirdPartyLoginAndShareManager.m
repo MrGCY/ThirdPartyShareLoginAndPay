@@ -9,8 +9,8 @@
 #import "ThirdPartyLoginAndShareManager.h"
 #import "ThirdPartyLoginContans.h"
 #import "WXApiObject.h"
-//#import "payRequsestHandler.h"
-//#import "WeChatOrder.h"
+#import "payRequsestHandler.h"
+#import "WeChatOrder.h"
 #import <ifaddrs.h>
 #import <arpa/inet.h>
 
@@ -370,39 +370,38 @@ NSString * const PARTNER_ID = @"w12we34rt56yu78io90pasdfghjklzxc";
 //微信支付
 - (void)wxPayWithPrepayId:(NSString *)prepayId andPayResponse:(PayResponseBlock)payReponse{
     self.payResponseBlock = payReponse;
-//    payRequsestHandler *req = [payRequsestHandler alloc];
-//    [req init:APP_ID mch_id:MCH_ID];
-//    [req setKey:PARTNER_ID];
-//    [req payWithPrepareParams:[req getSignParamsWithPrepareID:prepayId]];
+    payRequsestHandler *req = [payRequsestHandler alloc];
+    [req init:APP_ID mch_id:MCH_ID];
+    [req setKey:PARTNER_ID];
+    [req payWithPrepareParams:[req getSignParamsWithPrepareID:prepayId]];
 }
 #pragma mark - 微信支付
 - (void)weChatPayOrderTitle:(NSString *)title andAttach:(NSString *)attach andPrice:(NSString *)price
 {
     NSLog(@"++++++++++++跳到微信支付页面");
     if([WXApi isWXAppInstalled]){
-//        WeChatOrder *order = [[WeChatOrder alloc] init];
-//        order.orderName = title;
-//        order.orderNo = [self generateTradeNO];
-//        order.attach = attach;
-//        order.orderPrice = price;               //按每分支付的10分就是1角钱
-//        [self wxPayWithOrder:order andNotifyUrl:[NSString stringWithFormat:@"%@%@",kIP,@"/cooperation/ifachui/wxpay/money.jsp"]];
+        WeChatOrder *order = [[WeChatOrder alloc] init];
+        order.orderName = title;
+        order.orderNo = [self generateTradeNO];
+        order.attach = attach;
+        order.orderPrice = price;               //按每分支付的10分就是1角钱
+        [self wxPayWithOrder:order andNotifyUrl:[NSString stringWithFormat:@"%@%@",kIP,@"/cooperation/ifachui/wxpay/money.jsp"]];
     }else{
         [self showToastMessage:@"请安装微信"];
     }
 }
 
 #pragma mark   =================微信支付=================
-//- (void)wxPayWithOrder:(WeChatOrder *)order andNotifyUrl:(NSString *)url
-//{
-//    //设置请求参数
-//    payRequsestHandler *req = [payRequsestHandler alloc];
-//    [req init:APP_ID mch_id:MCH_ID];
-//    [req setKey:PARTNER_ID];
-//    //获取到实际调起微信支付的参数后，在app端调起支付
-//    NSMutableDictionary *dict = [req sendPay_prepareWithOrder:order andNotifyURL:url];
-//    [req payWithPrepareParams:dict];
-//}
-
+- (void)wxPayWithOrder:(WeChatOrder *)order andNotifyUrl:(NSString *)url
+{
+    //设置请求参数
+    payRequsestHandler *req = [payRequsestHandler alloc];
+    [req init:APP_ID mch_id:MCH_ID];
+    [req setKey:PARTNER_ID];
+    //获取到实际调起微信支付的参数后，在app端调起支付
+    NSMutableDictionary *dict = [req sendPay_prepareWithOrder:order andNotifyURL:url];
+    [req payWithPrepareParams:dict];
+}
 #pragma mark  ================产生随机订单号===============
 - (NSString *)generateTradeNO
 {
