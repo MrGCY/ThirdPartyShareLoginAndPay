@@ -1,0 +1,14 @@
+//
+//  ThirdPartyPrefixHeader.pch
+//  ThirdPartyShareLoginAndPay
+//
+//  Created by Gauss on 2017/12/27.
+//  Copyright © 2017年 Gauss. All rights reserved.
+//
+
+#ifndef ThirdPartyPrefixHeader_pch
+#define ThirdPartyPrefixHeader_pch
+
+#import "ThirdPartyMacros.h"
+#import "UIView+Extension.h"
+#endif /* ThirdPartyPrefixHeader_pch */

@@ -24,6 +24,15 @@
 		7E66E5DD1FF34513006E4245 /* CYPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E5DB1FF34513006E4245 /* CYPayViewController.xib */; };
 		7E66E5E21FF34545006E4245 /* CYPurchaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5E01FF34545006E4245 /* CYPurchaseViewController.m */; };
 		7E66E5E31FF34545006E4245 /* CYPurchaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E5E11FF34545006E4245 /* CYPurchaseViewController.xib */; };
+		7E66E5E81FF34F31006E4245 /* CYShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5E51FF34F30006E4245 /* CYShareView.m */; };
+		7E66E5E91FF34F31006E4245 /* CYShareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E5E71FF34F31006E4245 /* CYShareView.xib */; };
+		7E66E62B1FF360AA006E4245 /* UIBarButtonItem+QU.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6021FF360AA006E4245 /* UIBarButtonItem+QU.m */; };
+		7E66E62C1FF360AA006E4245 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6051FF360AA006E4245 /* UIButton+Category.m */; };
+		7E66E62D1FF360AA006E4245 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6081FF360AA006E4245 /* UIColor+Hex.m */; };
+		7E66E62E1FF360AA006E4245 /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E60B1FF360AA006E4245 /* UIImage+Blur.m */; };
+		7E66E62F1FF360AA006E4245 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E60D1FF360AA006E4245 /* UIImage+GIF.m */; };
+		7E66E6301FF360AA006E4245 /* UIImageView+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E60F1FF360AA006E4245 /* UIImageView+Blur.m */; };
+		7E66E6331FF360AA006E4245 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6171FF360AA006E4245 /* UIView+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +84,26 @@
 		7E66E5DF1FF34545006E4245 /* CYPurchaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYPurchaseViewController.h; sourceTree = "<group>"; };
 		7E66E5E01FF34545006E4245 /* CYPurchaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYPurchaseViewController.m; sourceTree = "<group>"; };
 		7E66E5E11FF34545006E4245 /* CYPurchaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYPurchaseViewController.xib; sourceTree = "<group>"; };
+		7E66E5E51FF34F30006E4245 /* CYShareView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYShareView.m; sourceTree = "<group>"; };
+		7E66E5E61FF34F31006E4245 /* CYShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYShareView.h; sourceTree = "<group>"; };
+		7E66E5E71FF34F31006E4245 /* CYShareView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYShareView.xib; sourceTree = "<group>"; };
+		7E66E5EA1FF3519D006E4245 /* ThirdPartyPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdPartyPrefixHeader.pch; sourceTree = "<group>"; };
+		7E66E5EC1FF36023006E4245 /* ColorCommonMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorCommonMacros.h; sourceTree = "<group>"; };
+		7E66E5ED1FF36023006E4245 /* ThirdPartyMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyMacros.h; sourceTree = "<group>"; };
+		7E66E6011FF360AA006E4245 /* UIBarButtonItem+QU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+QU.h"; sourceTree = "<group>"; };
+		7E66E6021FF360AA006E4245 /* UIBarButtonItem+QU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+QU.m"; sourceTree = "<group>"; };
+		7E66E6041FF360AA006E4245 /* UIButton+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Category.h"; sourceTree = "<group>"; };
+		7E66E6051FF360AA006E4245 /* UIButton+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Category.m"; sourceTree = "<group>"; };
+		7E66E6071FF360AA006E4245 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		7E66E6081FF360AA006E4245 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		7E66E60A1FF360AA006E4245 /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		7E66E60B1FF360AA006E4245 /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
+		7E66E60C1FF360AA006E4245 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		7E66E60D1FF360AA006E4245 /* UIImage+GIF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GIF.m"; sourceTree = "<group>"; };
+		7E66E60E1FF360AA006E4245 /* UIImageView+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Blur.h"; sourceTree = "<group>"; };
+		7E66E60F1FF360AA006E4245 /* UIImageView+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Blur.m"; sourceTree = "<group>"; };
+		7E66E6161FF360AA006E4245 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		7E66E6171FF360AA006E4245 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +183,8 @@
 		7E66E5C21FF33510006E4245 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7E66E5F01FF360AA006E4245 /* Category */,
+				7E66E5EF1FF36026006E4245 /* Common */,
 				7E66E5CE1FF34441006E4245 /* Section */,
 				7E66E5C41FF34387006E4245 /* Main */,
 				7E66E5C31FF3351A006E4245 /* Others */,
@@ -170,6 +201,7 @@
 				7E66E5991FF334D9006E4245 /* Assets.xcassets */,
 				7E66E59B1FF334D9006E4245 /* LaunchScreen.storyboard */,
 				7E66E59F1FF334D9006E4245 /* main.m */,
+				7E66E5EA1FF3519D006E4245 /* ThirdPartyPrefixHeader.pch */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -200,6 +232,7 @@
 		7E66E5CF1FF34457006E4245 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				7E66E5E41FF34E6C006E4245 /* View */,
 				7E66E5D21FF3449B006E4245 /* Controller */,
 			);
 			path = Share;
@@ -249,6 +282,102 @@
 				7E66E5E11FF34545006E4245 /* CYPurchaseViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		7E66E5E41FF34E6C006E4245 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5E61FF34F31006E4245 /* CYShareView.h */,
+				7E66E5E51FF34F30006E4245 /* CYShareView.m */,
+				7E66E5E71FF34F31006E4245 /* CYShareView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E66E5EB1FF36023006E4245 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5EC1FF36023006E4245 /* ColorCommonMacros.h */,
+				7E66E5ED1FF36023006E4245 /* ThirdPartyMacros.h */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		7E66E5EF1FF36026006E4245 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5EB1FF36023006E4245 /* Macros */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		7E66E5F01FF360AA006E4245 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E5FF1FF360AA006E4245 /* UiKit */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		7E66E5FF1FF360AA006E4245 /* UiKit */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E6001FF360AA006E4245 /* UIBarButtonItem */,
+				7E66E6031FF360AA006E4245 /* UIButton */,
+				7E66E6061FF360AA006E4245 /* UIColor */,
+				7E66E6091FF360AA006E4245 /* UIimage */,
+				7E66E6151FF360AA006E4245 /* UIView */,
+			);
+			path = UiKit;
+			sourceTree = "<group>";
+		};
+		7E66E6001FF360AA006E4245 /* UIBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E6011FF360AA006E4245 /* UIBarButtonItem+QU.h */,
+				7E66E6021FF360AA006E4245 /* UIBarButtonItem+QU.m */,
+			);
+			path = UIBarButtonItem;
+			sourceTree = "<group>";
+		};
+		7E66E6031FF360AA006E4245 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E6041FF360AA006E4245 /* UIButton+Category.h */,
+				7E66E6051FF360AA006E4245 /* UIButton+Category.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		7E66E6061FF360AA006E4245 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E6071FF360AA006E4245 /* UIColor+Hex.h */,
+				7E66E6081FF360AA006E4245 /* UIColor+Hex.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		7E66E6091FF360AA006E4245 /* UIimage */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E60A1FF360AA006E4245 /* UIImage+Blur.h */,
+				7E66E60B1FF360AA006E4245 /* UIImage+Blur.m */,
+				7E66E60C1FF360AA006E4245 /* UIImage+GIF.h */,
+				7E66E60D1FF360AA006E4245 /* UIImage+GIF.m */,
+				7E66E60E1FF360AA006E4245 /* UIImageView+Blur.h */,
+				7E66E60F1FF360AA006E4245 /* UIImageView+Blur.m */,
+			);
+			path = UIimage;
+			sourceTree = "<group>";
+		};
+		7E66E6151FF360AA006E4245 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E6161FF360AA006E4245 /* UIView+Extension.h */,
+				7E66E6171FF360AA006E4245 /* UIView+Extension.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +488,7 @@
 			files = (
 				7E66E5DD1FF34513006E4245 /* CYPayViewController.xib in Resources */,
 				7E66E5D71FF344C7006E4245 /* CYShareViewController.xib in Resources */,
+				7E66E5E91FF34F31006E4245 /* CYShareView.xib in Resources */,
 				7E66E59D1FF334D9006E4245 /* LaunchScreen.storyboard in Resources */,
 				7E66E59A1FF334D9006E4245 /* Assets.xcassets in Resources */,
 				7E66E5981FF334D9006E4245 /* Main.storyboard in Resources */,
@@ -391,10 +521,18 @@
 				7E66E5CD1FF34438006E4245 /* CYBaseNavigationViewController.m in Sources */,
 				7E66E5951FF334D9006E4245 /* ViewController.m in Sources */,
 				7E66E5A01FF334D9006E4245 /* main.m in Sources */,
+				7E66E6331FF360AA006E4245 /* UIView+Extension.m in Sources */,
 				7E66E5E21FF34545006E4245 /* CYPurchaseViewController.m in Sources */,
 				7E66E5921FF334D9006E4245 /* AppDelegate.m in Sources */,
+				7E66E62E1FF360AA006E4245 /* UIImage+Blur.m in Sources */,
+				7E66E6301FF360AA006E4245 /* UIImageView+Blur.m in Sources */,
+				7E66E5E81FF34F31006E4245 /* CYShareView.m in Sources */,
+				7E66E62C1FF360AA006E4245 /* UIButton+Category.m in Sources */,
 				7E66E5DC1FF34513006E4245 /* CYPayViewController.m in Sources */,
 				7E66E5C71FF343E6006E4245 /* CYMainTabBarViewController.m in Sources */,
+				7E66E62D1FF360AA006E4245 /* UIColor+Hex.m in Sources */,
+				7E66E62B1FF360AA006E4245 /* UIBarButtonItem+QU.m in Sources */,
+				7E66E62F1FF360AA006E4245 /* UIImage+GIF.m in Sources */,
 				7E66E5CA1FF34404006E4245 /* CYBaseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +698,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EV6862XJJZ;
+				GCC_PREFIX_HEADER = ThirdPartyShareLoginAndPay/Classes/Others/ThirdPartyPrefixHeader.pch;
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,6 +714,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EV6862XJJZ;
+				GCC_PREFIX_HEADER = ThirdPartyShareLoginAndPay/Classes/Others/ThirdPartyPrefixHeader.pch;
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

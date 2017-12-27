@@ -7,31 +7,51 @@
 //
 
 #import "CYShareViewController.h"
-
+#import "CYShareView.h"
 @interface CYShareViewController ()
-
+@property (strong, nonatomic) CYShareView * shareView;
 @end
 
 @implementation CYShareViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)clickShareEvent:(UIButton *)sender {
+    [self.shareView showShareView];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark- 懒加载
+-(CYShareView *)shareView{
+    if (!_shareView) {
+        _shareView = [CYShareView createShareView];
+        WEAKSELF
+        _shareView.clickShareBlock = ^(ShareType shareType) {
+            STRONGSELFFor(weakSelf);
+            [strongSelf clickShareWithType:shareType];
+        };
+    }
+    return _shareView;
 }
-*/
-
+-(void)clickShareWithType:(ShareType)type{
+    switch (type) {
+        case ShareTypeQQ:
+            
+            break;
+        case ShareTypeWeiBo:
+            
+            break;
+        case ShareTypeWeixin:
+            
+            break;
+        case ShareTypeQQZone:
+            
+            break;
+        case ShareTypeFriend:
+            
+            break;
+        default:
+            break;
+    }
+}
 @end
