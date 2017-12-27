@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21DECD9FD13BF9D9589EF9C0 /* libPods-ThirdPartyShareLoginAndPayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E58D42FFD5E5AE8FA08473E5 /* libPods-ThirdPartyShareLoginAndPayUITests.a */; };
+		428480E418EBD2EC0CEB1641 /* libPods-ThirdPartyShareLoginAndPayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CEB5D976D8285796FB48A5 /* libPods-ThirdPartyShareLoginAndPayTests.a */; };
+		5D326329308F9D4078714BF5 /* libPods-ThirdPartyShareLoginAndPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC48360F2D82AA7C923D988 /* libPods-ThirdPartyShareLoginAndPay.a */; };
 		7E66E5921FF334D9006E4245 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5911FF334D9006E4245 /* AppDelegate.m */; };
 		7E66E5951FF334D9006E4245 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5941FF334D9006E4245 /* ViewController.m */; };
 		7E66E5981FF334D9006E4245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E5961FF334D9006E4245 /* Main.storyboard */; };
@@ -33,6 +36,24 @@
 		7E66E62F1FF360AA006E4245 /* UIImage+GIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E60D1FF360AA006E4245 /* UIImage+GIF.m */; };
 		7E66E6301FF360AA006E4245 /* UIImageView+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E60F1FF360AA006E4245 /* UIImageView+Blur.m */; };
 		7E66E6331FF360AA006E4245 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6171FF360AA006E4245 /* UIView+Extension.m */; };
+		7E66E6491FF3648C006E4245 /* ThirdPartyLoginAndShareManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E63E1FF3648B006E4245 /* ThirdPartyLoginAndShareManager.m */; };
+		7E66E64A1FF3648C006E4245 /* QQApiUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6401FF3648B006E4245 /* QQApiUtils.m */; };
+		7E66E64B1FF3648C006E4245 /* UIImage+TT.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6441FF3648B006E4245 /* UIImage+TT.m */; };
+		7E66E64C1FF3648C006E4245 /* WBApiUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6461FF3648B006E4245 /* WBApiUtils.m */; };
+		7E66E64D1FF3648C006E4245 /* WXApiUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6481FF3648B006E4245 /* WXApiUtils.m */; };
+		7E66E6541FF36738006E4245 /* APIGenerate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6501FF36738006E4245 /* APIGenerate.m */; };
+		7E66E6551FF36738006E4245 /* NetWorkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6521FF36738006E4245 /* NetWorkManager.m */; };
+		7E66E6561FF36738006E4245 /* Config.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E6531FF36738006E4245 /* Config.json */; };
+		7E66E65F1FF368BC006E4245 /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E6581FF368BA006E4245 /* TencentOpenAPI.framework */; };
+		7E66E6601FF368BC006E4245 /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E6591FF368BA006E4245 /* TencentOpenApi_IOS_Bundle.bundle */; };
+		7E66E6611FF368BC006E4245 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E65B1FF368BB006E4245 /* libWeChatSDK.a */; };
+		7E66E6631FF36BBB006E4245 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E6621FF36BBA006E4245 /* SystemConfiguration.framework */; };
+		7E66E6651FF36C47006E4245 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E6641FF36C47006E4245 /* libz.1.dylib */; };
+		7E66E6671FF36C63006E4245 /* libc++.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E6661FF36C63006E4245 /* libc++.1.dylib */; };
+		7E66E6691FF36C90006E4245 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E6681FF36C90006E4245 /* libsqlite3.dylib */; };
+		7E66E66B1FF36C9D006E4245 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E66A1FF36C9D006E4245 /* Security.framework */; };
+		7E66E66D1FF36CB0006E4245 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E66C1FF36CB0006E4245 /* CoreTelephony.framework */; };
+		7E66E66F1FF36CBC006E4245 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E66E1FF36CBC006E4245 /* CFNetwork.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +74,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09968527EC6B6DE2950B316D /* Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayUITests/Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig"; sourceTree = "<group>"; };
+		0D5E71FBF10C0068CA3C211F /* Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayTests/Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig"; sourceTree = "<group>"; };
 		7E66E58D1FF334D9006E4245 /* ThirdPartyShareLoginAndPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdPartyShareLoginAndPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E66E5901FF334D9006E4245 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E66E5911FF334D9006E4245 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -104,6 +127,43 @@
 		7E66E60F1FF360AA006E4245 /* UIImageView+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Blur.m"; sourceTree = "<group>"; };
 		7E66E6161FF360AA006E4245 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		7E66E6171FF360AA006E4245 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		7E66E63D1FF3648B006E4245 /* ThirdPartyLoginAndShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyLoginAndShareManager.h; sourceTree = "<group>"; };
+		7E66E63E1FF3648B006E4245 /* ThirdPartyLoginAndShareManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdPartyLoginAndShareManager.m; sourceTree = "<group>"; };
+		7E66E63F1FF3648B006E4245 /* QQApiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQApiUtils.h; sourceTree = "<group>"; };
+		7E66E6401FF3648B006E4245 /* QQApiUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QQApiUtils.m; sourceTree = "<group>"; };
+		7E66E6411FF3648B006E4245 /* ThirdPartyLoginContans.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartyLoginContans.h; sourceTree = "<group>"; };
+		7E66E6421FF3648B006E4245 /* ThirdPartySystemCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdPartySystemCommon.h; sourceTree = "<group>"; };
+		7E66E6431FF3648B006E4245 /* UIImage+TT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TT.h"; sourceTree = "<group>"; };
+		7E66E6441FF3648B006E4245 /* UIImage+TT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TT.m"; sourceTree = "<group>"; };
+		7E66E6451FF3648B006E4245 /* WBApiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBApiUtils.h; sourceTree = "<group>"; };
+		7E66E6461FF3648B006E4245 /* WBApiUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBApiUtils.m; sourceTree = "<group>"; };
+		7E66E6471FF3648B006E4245 /* WXApiUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiUtils.h; sourceTree = "<group>"; };
+		7E66E6481FF3648B006E4245 /* WXApiUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXApiUtils.m; sourceTree = "<group>"; };
+		7E66E64F1FF36738006E4245 /* APIGenerate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIGenerate.h; sourceTree = "<group>"; };
+		7E66E6501FF36738006E4245 /* APIGenerate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIGenerate.m; sourceTree = "<group>"; };
+		7E66E6511FF36738006E4245 /* NetWorkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkManager.h; sourceTree = "<group>"; };
+		7E66E6521FF36738006E4245 /* NetWorkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkManager.m; sourceTree = "<group>"; };
+		7E66E6531FF36738006E4245 /* Config.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Config.json; sourceTree = "<group>"; };
+		7E66E6581FF368BA006E4245 /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
+		7E66E6591FF368BA006E4245 /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
+		7E66E65B1FF368BB006E4245 /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		7E66E65C1FF368BB006E4245 /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		7E66E65D1FF368BB006E4245 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		7E66E65E1FF368BB006E4245 /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		7E66E6621FF36BBA006E4245 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		7E66E6641FF36C47006E4245 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
+		7E66E6661FF36C63006E4245 /* libc++.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.1.dylib"; path = "../../../../usr/lib/libc++.1.dylib"; sourceTree = "<group>"; };
+		7E66E6681FF36C90006E4245 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = ../../../../usr/lib/libsqlite3.dylib; sourceTree = "<group>"; };
+		7E66E66A1FF36C9D006E4245 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		7E66E66C1FF36CB0006E4245 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		7E66E66E1FF36CBC006E4245 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		8CC48360F2D82AA7C923D988 /* libPods-ThirdPartyShareLoginAndPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThirdPartyShareLoginAndPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6CEB5D976D8285796FB48A5 /* libPods-ThirdPartyShareLoginAndPayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThirdPartyShareLoginAndPayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04C9B0EDB9568CA220201FF /* Pods-ThirdPartyShareLoginAndPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPay/Pods-ThirdPartyShareLoginAndPay.debug.xcconfig"; sourceTree = "<group>"; };
+		CD5A371732C022A0217FC1A4 /* Pods-ThirdPartyShareLoginAndPay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPay.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPay/Pods-ThirdPartyShareLoginAndPay.release.xcconfig"; sourceTree = "<group>"; };
+		CEF6A65FB06A70CFB8FB64EC /* Pods-ThirdPartyShareLoginAndPayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayTests/Pods-ThirdPartyShareLoginAndPayTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D14655F3C549E365AB7B57C5 /* Pods-ThirdPartyShareLoginAndPayUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPayUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayUITests/Pods-ThirdPartyShareLoginAndPayUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E58D42FFD5E5AE8FA08473E5 /* libPods-ThirdPartyShareLoginAndPayUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThirdPartyShareLoginAndPayUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +171,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E66E66F1FF36CBC006E4245 /* CFNetwork.framework in Frameworks */,
+				7E66E66D1FF36CB0006E4245 /* CoreTelephony.framework in Frameworks */,
+				7E66E66B1FF36C9D006E4245 /* Security.framework in Frameworks */,
+				7E66E6691FF36C90006E4245 /* libsqlite3.dylib in Frameworks */,
+				7E66E6671FF36C63006E4245 /* libc++.1.dylib in Frameworks */,
+				7E66E6651FF36C47006E4245 /* libz.1.dylib in Frameworks */,
+				7E66E6631FF36BBB006E4245 /* SystemConfiguration.framework in Frameworks */,
+				5D326329308F9D4078714BF5 /* libPods-ThirdPartyShareLoginAndPay.a in Frameworks */,
+				7E66E65F1FF368BC006E4245 /* TencentOpenAPI.framework in Frameworks */,
+				7E66E6611FF368BC006E4245 /* libWeChatSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				428480E418EBD2EC0CEB1641 /* libPods-ThirdPartyShareLoginAndPayTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DECD9FD13BF9D9589EF9C0 /* libPods-ThirdPartyShareLoginAndPayUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +210,8 @@
 				7E66E5A81FF334D9006E4245 /* ThirdPartyShareLoginAndPayTests */,
 				7E66E5B31FF334D9006E4245 /* ThirdPartyShareLoginAndPayUITests */,
 				7E66E58E1FF334D9006E4245 /* Products */,
+				E2283595680F5BA222A646EF /* Pods */,
+				9F0761E24814AACF359CBA99 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -183,6 +257,8 @@
 		7E66E5C21FF33510006E4245 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				7E66E63B1FF3643C006E4245 /* Library */,
+				7E66E63A1FF3642E006E4245 /* Utils */,
 				7E66E5F01FF360AA006E4245 /* Category */,
 				7E66E5EF1FF36026006E4245 /* Common */,
 				7E66E5CE1FF34441006E4245 /* Section */,
@@ -380,6 +456,105 @@
 			path = UIView;
 			sourceTree = "<group>";
 		};
+		7E66E63A1FF3642E006E4245 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E64E1FF36738006E4245 /* NetWorkTool(网络) */,
+				7E66E63C1FF3648B006E4245 /* ThirdPartyLoginAndShare */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		7E66E63B1FF3643C006E4245 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E6571FF368BA006E4245 /* TencentSDK */,
+				7E66E65A1FF368BB006E4245 /* WeixinSDK */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		7E66E63C1FF3648B006E4245 /* ThirdPartyLoginAndShare */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E63D1FF3648B006E4245 /* ThirdPartyLoginAndShareManager.h */,
+				7E66E63E1FF3648B006E4245 /* ThirdPartyLoginAndShareManager.m */,
+				7E66E63F1FF3648B006E4245 /* QQApiUtils.h */,
+				7E66E6401FF3648B006E4245 /* QQApiUtils.m */,
+				7E66E6411FF3648B006E4245 /* ThirdPartyLoginContans.h */,
+				7E66E6421FF3648B006E4245 /* ThirdPartySystemCommon.h */,
+				7E66E6431FF3648B006E4245 /* UIImage+TT.h */,
+				7E66E6441FF3648B006E4245 /* UIImage+TT.m */,
+				7E66E6451FF3648B006E4245 /* WBApiUtils.h */,
+				7E66E6461FF3648B006E4245 /* WBApiUtils.m */,
+				7E66E6471FF3648B006E4245 /* WXApiUtils.h */,
+				7E66E6481FF3648B006E4245 /* WXApiUtils.m */,
+			);
+			path = ThirdPartyLoginAndShare;
+			sourceTree = "<group>";
+		};
+		7E66E64E1FF36738006E4245 /* NetWorkTool(网络) */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E64F1FF36738006E4245 /* APIGenerate.h */,
+				7E66E6501FF36738006E4245 /* APIGenerate.m */,
+				7E66E6511FF36738006E4245 /* NetWorkManager.h */,
+				7E66E6521FF36738006E4245 /* NetWorkManager.m */,
+				7E66E6531FF36738006E4245 /* Config.json */,
+			);
+			path = "NetWorkTool(网络)";
+			sourceTree = "<group>";
+		};
+		7E66E6571FF368BA006E4245 /* TencentSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E6581FF368BA006E4245 /* TencentOpenAPI.framework */,
+				7E66E6591FF368BA006E4245 /* TencentOpenApi_IOS_Bundle.bundle */,
+			);
+			path = TencentSDK;
+			sourceTree = "<group>";
+		};
+		7E66E65A1FF368BB006E4245 /* WeixinSDK */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E65B1FF368BB006E4245 /* libWeChatSDK.a */,
+				7E66E65C1FF368BB006E4245 /* WechatAuthSDK.h */,
+				7E66E65D1FF368BB006E4245 /* WXApi.h */,
+				7E66E65E1FF368BB006E4245 /* WXApiObject.h */,
+			);
+			path = WeixinSDK;
+			sourceTree = "<group>";
+		};
+		9F0761E24814AACF359CBA99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E66E66E1FF36CBC006E4245 /* CFNetwork.framework */,
+				7E66E66C1FF36CB0006E4245 /* CoreTelephony.framework */,
+				7E66E66A1FF36C9D006E4245 /* Security.framework */,
+				7E66E6681FF36C90006E4245 /* libsqlite3.dylib */,
+				7E66E6661FF36C63006E4245 /* libc++.1.dylib */,
+				7E66E6641FF36C47006E4245 /* libz.1.dylib */,
+				7E66E6621FF36BBA006E4245 /* SystemConfiguration.framework */,
+				8CC48360F2D82AA7C923D988 /* libPods-ThirdPartyShareLoginAndPay.a */,
+				A6CEB5D976D8285796FB48A5 /* libPods-ThirdPartyShareLoginAndPayTests.a */,
+				E58D42FFD5E5AE8FA08473E5 /* libPods-ThirdPartyShareLoginAndPayUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E2283595680F5BA222A646EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C04C9B0EDB9568CA220201FF /* Pods-ThirdPartyShareLoginAndPay.debug.xcconfig */,
+				CD5A371732C022A0217FC1A4 /* Pods-ThirdPartyShareLoginAndPay.release.xcconfig */,
+				CEF6A65FB06A70CFB8FB64EC /* Pods-ThirdPartyShareLoginAndPayTests.debug.xcconfig */,
+				0D5E71FBF10C0068CA3C211F /* Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig */,
+				D14655F3C549E365AB7B57C5 /* Pods-ThirdPartyShareLoginAndPayUITests.debug.xcconfig */,
+				09968527EC6B6DE2950B316D /* Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,9 +562,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E66E5B91FF334D9006E4245 /* Build configuration list for PBXNativeTarget "ThirdPartyShareLoginAndPay" */;
 			buildPhases = (
+				8AE970D3696C5BDC52CD1D9D /* [CP] Check Pods Manifest.lock */,
 				7E66E5891FF334D9006E4245 /* Sources */,
 				7E66E58A1FF334D9006E4245 /* Frameworks */,
 				7E66E58B1FF334D9006E4245 /* Resources */,
+				81C9461E70ADD3A79714CF8A /* [CP] Embed Pods Frameworks */,
+				3E31E901DC69155379FAEF30 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -404,9 +582,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E66E5BC1FF334D9006E4245 /* Build configuration list for PBXNativeTarget "ThirdPartyShareLoginAndPayTests" */;
 			buildPhases = (
+				712E0CD31DE8DF9FB82398E8 /* [CP] Check Pods Manifest.lock */,
 				7E66E5A11FF334D9006E4245 /* Sources */,
 				7E66E5A21FF334D9006E4245 /* Frameworks */,
 				7E66E5A31FF334D9006E4245 /* Resources */,
+				DEB7710B0BA6DC1E9C43FFC8 /* [CP] Embed Pods Frameworks */,
+				31F3985FB91B35BDC4EAA16E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -422,9 +603,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7E66E5BF1FF334D9006E4245 /* Build configuration list for PBXNativeTarget "ThirdPartyShareLoginAndPayUITests" */;
 			buildPhases = (
+				B03C2C05CA182B96DC25C7C7 /* [CP] Check Pods Manifest.lock */,
 				7E66E5AC1FF334D9006E4245 /* Sources */,
 				7E66E5AD1FF334D9006E4245 /* Frameworks */,
 				7E66E5AE1FF334D9006E4245 /* Resources */,
+				1E3DC3F1684D36BF36A31FBE /* [CP] Embed Pods Frameworks */,
+				0ECBB8F70BA31FCA5271E903 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -486,11 +670,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E66E6561FF36738006E4245 /* Config.json in Resources */,
 				7E66E5DD1FF34513006E4245 /* CYPayViewController.xib in Resources */,
 				7E66E5D71FF344C7006E4245 /* CYShareViewController.xib in Resources */,
 				7E66E5E91FF34F31006E4245 /* CYShareView.xib in Resources */,
 				7E66E59D1FF334D9006E4245 /* LaunchScreen.storyboard in Resources */,
 				7E66E59A1FF334D9006E4245 /* Assets.xcassets in Resources */,
+				7E66E6601FF368BC006E4245 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				7E66E5981FF334D9006E4245 /* Main.storyboard in Resources */,
 				7E66E5E31FF34545006E4245 /* CYPurchaseViewController.xib in Resources */,
 			);
@@ -512,26 +698,183 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ECBB8F70BA31FCA5271E903 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayUITests/Pods-ThirdPartyShareLoginAndPayUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E3DC3F1684D36BF36A31FBE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayUITests/Pods-ThirdPartyShareLoginAndPayUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31F3985FB91B35BDC4EAA16E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayTests/Pods-ThirdPartyShareLoginAndPayTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3E31E901DC69155379FAEF30 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPay/Pods-ThirdPartyShareLoginAndPay-resources.sh",
+				"${PODS_ROOT}/WeiboSDK/libWeiboSDK/WeiboSDK.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPay/Pods-ThirdPartyShareLoginAndPay-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		712E0CD31DE8DF9FB82398E8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThirdPartyShareLoginAndPayTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		81C9461E70ADD3A79714CF8A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPay/Pods-ThirdPartyShareLoginAndPay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AE970D3696C5BDC52CD1D9D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThirdPartyShareLoginAndPay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B03C2C05CA182B96DC25C7C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ThirdPartyShareLoginAndPayUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB7710B0BA6DC1E9C43FFC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayTests/Pods-ThirdPartyShareLoginAndPayTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7E66E5891FF334D9006E4245 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7E66E5D61FF344C7006E4245 /* CYShareViewController.m in Sources */,
+				7E66E64C1FF3648C006E4245 /* WBApiUtils.m in Sources */,
 				7E66E5CD1FF34438006E4245 /* CYBaseNavigationViewController.m in Sources */,
+				7E66E64D1FF3648C006E4245 /* WXApiUtils.m in Sources */,
 				7E66E5951FF334D9006E4245 /* ViewController.m in Sources */,
 				7E66E5A01FF334D9006E4245 /* main.m in Sources */,
 				7E66E6331FF360AA006E4245 /* UIView+Extension.m in Sources */,
 				7E66E5E21FF34545006E4245 /* CYPurchaseViewController.m in Sources */,
 				7E66E5921FF334D9006E4245 /* AppDelegate.m in Sources */,
+				7E66E64B1FF3648C006E4245 /* UIImage+TT.m in Sources */,
+				7E66E64A1FF3648C006E4245 /* QQApiUtils.m in Sources */,
 				7E66E62E1FF360AA006E4245 /* UIImage+Blur.m in Sources */,
 				7E66E6301FF360AA006E4245 /* UIImageView+Blur.m in Sources */,
 				7E66E5E81FF34F31006E4245 /* CYShareView.m in Sources */,
+				7E66E6541FF36738006E4245 /* APIGenerate.m in Sources */,
 				7E66E62C1FF360AA006E4245 /* UIButton+Category.m in Sources */,
+				7E66E6491FF3648C006E4245 /* ThirdPartyLoginAndShareManager.m in Sources */,
 				7E66E5DC1FF34513006E4245 /* CYPayViewController.m in Sources */,
 				7E66E5C71FF343E6006E4245 /* CYMainTabBarViewController.m in Sources */,
 				7E66E62D1FF360AA006E4245 /* UIColor+Hex.m in Sources */,
 				7E66E62B1FF360AA006E4245 /* UIBarButtonItem+QU.m in Sources */,
+				7E66E6551FF36738006E4245 /* NetWorkManager.m in Sources */,
 				7E66E62F1FF360AA006E4245 /* UIImage+GIF.m in Sources */,
 				7E66E5CA1FF34404006E4245 /* CYBaseViewController.m in Sources */,
 			);
@@ -694,15 +1037,56 @@
 		};
 		7E66E5BA1FF334D9006E4245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C04C9B0EDB9568CA220201FF /* Pods-ThirdPartyShareLoginAndPay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EV6862XJJZ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdPartyShareLoginAndPay/Classes/Library/TencentSDK",
+				);
 				GCC_PREFIX_HEADER = ThirdPartyShareLoginAndPay/Classes/Others/ThirdPartyPrefixHeader.pch;
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdPartyShareLoginAndPay/Classes/Library/WeixinSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"WeiboSDK\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-Objc",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbelive.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -710,15 +1094,56 @@
 		};
 		7E66E5BB1FF334D9006E4245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD5A371732C022A0217FC1A4 /* Pods-ThirdPartyShareLoginAndPay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EV6862XJJZ;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdPartyShareLoginAndPay/Classes/Library/TencentSDK",
+				);
 				GCC_PREFIX_HEADER = ThirdPartyShareLoginAndPay/Classes/Others/ThirdPartyPrefixHeader.pch;
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/ThirdPartyShareLoginAndPay/Classes/Library/WeixinSDK",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"WeiboSDK\"",
+					"-l\"sqlite3\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-Objc",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbelive.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -726,6 +1151,7 @@
 		};
 		7E66E5BD1FF334D9006E4245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEF6A65FB06A70CFB8FB64EC /* Pods-ThirdPartyShareLoginAndPayTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -740,6 +1166,7 @@
 		};
 		7E66E5BE1FF334D9006E4245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D5E71FBF10C0068CA3C211F /* Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -754,6 +1181,7 @@
 		};
 		7E66E5C01FF334D9006E4245 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14655F3C549E365AB7B57C5 /* Pods-ThirdPartyShareLoginAndPayUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPayUITests/Info.plist;
@@ -767,6 +1195,7 @@
 		};
 		7E66E5C11FF334D9006E4245 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09968527EC6B6DE2950B316D /* Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ThirdPartyShareLoginAndPayUITests/Info.plist;

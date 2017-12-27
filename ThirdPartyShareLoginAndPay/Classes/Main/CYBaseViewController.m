@@ -7,7 +7,7 @@
 //
 
 #import "CYBaseViewController.h"
-
+#import "MBProgressHUD.h"
 @interface CYBaseViewController ()
 
 @end
@@ -16,22 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark- toast相关
+- (void)showHUDError {
+    [self showHUDHintWithText:@"加载失败,请检查网络"];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)showHUDErrorMessage:(NSString *)message{
+    [self showHUDHintWithText:message];
 }
-*/
-
+- (void)showHUDHintWithText:(NSString *)text {
+    if (!text) {
+        return;
+    }
+    MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:[UIApplication sharedApplication].keyWindow animated:YES];
+    hub.mode = MBProgressHUDModeText;
+    //    hub.labelText = text;
+    hub.detailsLabelText = text;
+    hub.removeFromSuperViewOnHide = YES;
+    [hub show:YES];
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+        // Do something...
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hub hide:YES afterDelay:2];
+        });
+    });
+}
 @end

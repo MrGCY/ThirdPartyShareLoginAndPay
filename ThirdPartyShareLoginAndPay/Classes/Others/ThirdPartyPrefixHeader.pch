@@ -8,6 +8,8 @@
 
 #ifndef ThirdPartyPrefixHeader_pch
 #define ThirdPartyPrefixHeader_pch
+#import "APIGenerate.h"
+#import "NetWorkManager.h"
 
 #import "ThirdPartyMacros.h"
 #import "UIView+Extension.h"

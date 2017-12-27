@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface CYBaseViewController : UIViewController
-
+#pragma mark- toast相关
+- (void)showHUDError;
+- (void)showHUDErrorMessage:(NSString *)message;
+- (void)showHUDHintWithText:(NSString *)text;
 @end
