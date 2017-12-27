@@ -10,7 +10,8 @@
 #define ThirdPartyPrefixHeader_pch
 #import "APIGenerate.h"
 #import "NetWorkManager.h"
-
+#import "UIColor+Hex.h"
 #import "ThirdPartyMacros.h"
+#import "ColorCommonMacros.h"
 #import "UIView+Extension.h"
 #endif /* ThirdPartyPrefixHeader_pch */

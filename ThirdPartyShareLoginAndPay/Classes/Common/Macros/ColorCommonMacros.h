@@ -9,8 +9,7 @@
 #ifndef ColorCommonMacros_h
 #define ColorCommonMacros_h
 //主色调 金黄色
-#define ColorMainBase [UIColor colorWithHexString:@"#FDDB02"]
-#define ColorMainBase_Pink [UIColor colorWithHexString:@"#FDDB02"]
+#define ColorMainBase [UIColor colorWithHexString:@"#E66391"]
 //主背景色调 亚麻色
 #define  ColorMainBackGround [UIColor colorWithHexString:@"#FAF0E6"]
 //----------------------------系统颜色-----------------------------------
