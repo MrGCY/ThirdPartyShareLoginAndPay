@@ -444,37 +444,37 @@
 		7E66E5CE1FF34441006E4245 /* Section */ = {
 			isa = PBXGroup;
 			children = (
-				7E66E6F41FF388CB006E4245 /* Login */,
-				7E66E5D11FF34479006E4245 /* Purchase */,
-				7E66E5D01FF3445F006E4245 /* Pay */,
-				7E66E5CF1FF34457006E4245 /* Share */,
+				7E66E6F41FF388CB006E4245 /* Login-三方登录 */,
+				7E66E5D11FF34479006E4245 /* Purchase-内购 */,
+				7E66E5D01FF3445F006E4245 /* Pay-三方支付 */,
+				7E66E5CF1FF34457006E4245 /* Share-三方分享 */,
 			);
 			path = Section;
 			sourceTree = "<group>";
 		};
-		7E66E5CF1FF34457006E4245 /* Share */ = {
+		7E66E5CF1FF34457006E4245 /* Share-三方分享 */ = {
 			isa = PBXGroup;
 			children = (
 				7E66E5E41FF34E6C006E4245 /* View */,
 				7E66E5D21FF3449B006E4245 /* Controller */,
 			);
-			path = Share;
+			path = "Share-三方分享";
 			sourceTree = "<group>";
 		};
-		7E66E5D01FF3445F006E4245 /* Pay */ = {
+		7E66E5D01FF3445F006E4245 /* Pay-三方支付 */ = {
 			isa = PBXGroup;
 			children = (
 				7E66E5D81FF344FF006E4245 /* Controller */,
 			);
-			path = Pay;
+			path = "Pay-三方支付";
 			sourceTree = "<group>";
 		};
-		7E66E5D11FF34479006E4245 /* Purchase */ = {
+		7E66E5D11FF34479006E4245 /* Purchase-内购 */ = {
 			isa = PBXGroup;
 			children = (
 				7E66E5DE1FF34518006E4245 /* Controller */,
 			);
-			path = Purchase;
+			path = "Purchase-内购";
 			sourceTree = "<group>";
 		};
 		7E66E5D21FF3449B006E4245 /* Controller */ = {
@@ -609,7 +609,7 @@
 				7E66E6FA1FF38E56006E4245 /* Puchase */,
 				7E66E6701FF37AD3006E4245 /* AliPay */,
 				7E66E6CA1FF37AD4006E4245 /* WXPay */,
-				7E66E64E1FF36738006E4245 /* NetWorkTool(网络) */,
+				7E66E64E1FF36738006E4245 /* NetWorkTool */,
 				7E66E63C1FF3648B006E4245 /* ThirdPartyLoginAndShare */,
 			);
 			path = Utils;
@@ -644,7 +644,7 @@
 			path = ThirdPartyLoginAndShare;
 			sourceTree = "<group>";
 		};
-		7E66E64E1FF36738006E4245 /* NetWorkTool(网络) */ = {
+		7E66E64E1FF36738006E4245 /* NetWorkTool */ = {
 			isa = PBXGroup;
 			children = (
 				7E66E64F1FF36738006E4245 /* APIGenerate.h */,
@@ -653,7 +653,7 @@
 				7E66E6521FF36738006E4245 /* NetWorkManager.m */,
 				7E66E6531FF36738006E4245 /* Config.json */,
 			);
-			path = "NetWorkTool(网络)";
+			path = NetWorkTool;
 			sourceTree = "<group>";
 		};
 		7E66E6571FF368BA006E4245 /* TencentSDK */ = {
@@ -811,14 +811,14 @@
 			path = AliPaySDK;
 			sourceTree = "<group>";
 		};
-		7E66E6F41FF388CB006E4245 /* Login */ = {
+		7E66E6F41FF388CB006E4245 /* Login-三方登录 */ = {
 			isa = PBXGroup;
 			children = (
 				7E66E6F51FF38929006E4245 /* CYLoginViewController.h */,
 				7E66E6F61FF38929006E4245 /* CYLoginViewController.m */,
 				7E66E6F71FF38929006E4245 /* CYLoginViewController.xib */,
 			);
-			path = Login;
+			path = "Login-三方登录";
 			sourceTree = "<group>";
 		};
 		7E66E6FA1FF38E56006E4245 /* Puchase */ = {

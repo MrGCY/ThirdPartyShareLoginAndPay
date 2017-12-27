@@ -21,11 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7W-vf-XoH">
-                    <rect key="frame" x="87" y="313.5" width="200" height="40"/>
+                    <rect key="frame" x="15" y="313.5" width="345" height="40"/>
                     <color key="backgroundColor" red="0.90196078430000004" green="0.38823529410000002" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="x7I-qJ-QbK"/>
-                        <constraint firstAttribute="width" constant="200" id="zK6-FR-eto"/>
                     </constraints>
                     <state key="normal" title="分享">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,7 +36,9 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="n7W-vf-XoH" secondAttribute="trailing" constant="15" id="XJ4-bE-FZ6"/>
                 <constraint firstItem="n7W-vf-XoH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cHR-Fm-v9M"/>
+                <constraint firstItem="n7W-vf-XoH" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="xxp-LS-fIH"/>
                 <constraint firstItem="n7W-vf-XoH" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ySh-sU-QDg"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
