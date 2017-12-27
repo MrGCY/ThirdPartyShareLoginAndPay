@@ -1422,7 +1422,7 @@
 					"-Objc",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbeivr.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1489,7 +1489,7 @@
 					"-Objc",
 					"-all_load",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.quzhua.app;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bbeivr.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

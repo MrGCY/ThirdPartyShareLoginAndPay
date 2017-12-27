@@ -110,6 +110,25 @@ NSString * const PARTNER_ID = @"w12we34rt56yu78io90pasdfghjklzxc";
     }
     return NO;
 }
+- (BOOL)thirdPartyaApplication:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options{
+    if ([KTencentSchema isEqualToString:[url scheme]]) {
+        //QQ
+        return [TencentOAuth HandleOpenURL:url];
+        
+    }else if ([KTencentURLSchema isEqualToString:[url scheme]]) {
+        //QQ
+        return [QQApiInterface handleOpenURL:url delegate:self.qqUtils];
+        
+    }else if ([KWXURLSchema isEqualToString:[url scheme]]) {
+        //微信
+        return [WXApi handleOpenURL:url delegate:self.wxUtils];
+        
+    }else if ([KWBURLSchema isEqualToString:[url scheme]]){
+        //微博
+        return [WeiboSDK handleOpenURL:url delegate:self.wbUtils];
+    }
+    return NO;
+}
 #pragma mark- 显示提示语
 -(void)showToastMessage:(NSString *)message{
     if (self.thirdPartyDelegate && [self.thirdPartyDelegate respondsToSelector:@selector(thirdPartyDidShowToastMessage:)]) {
