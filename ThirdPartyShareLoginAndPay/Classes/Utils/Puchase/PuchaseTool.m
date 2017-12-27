@@ -63,7 +63,7 @@
 }
 - (void)requestProUpgradeProductData
 {
-    NSLog(@"------请求升级数据---------");
+    //------请求升级数据---------
     NSSet *productIdentifiers = [NSSet setWithObject:@"com.productid"];
     SKProductsRequest* productsRequest = [[SKProductsRequest alloc] initWithProductIdentifiers:productIdentifiers];
     productsRequest.delegate = self;
@@ -71,13 +71,13 @@
 }
 //弹出错误信息
 - (void)request:(SKRequest *)request didFailWithError:(NSError *)error{
-    NSLog(@"-------弹出错误信息----------");
+    //-------弹出错误信息----------
     if (self.delegate && [self.delegate respondsToSelector:@selector(puchaseRequestFailWithError:)]) {
         [self.delegate puchaseRequestFailWithError:error];
     }
 }
 -(void)requestDidFinish:(SKRequest *)request{
-    NSLog(@"----------反馈信息结束--------------");
+    //----------反馈信息结束--------------
     if (self.delegate && [self.delegate respondsToSelector:@selector(puchaseRequestFinish)]) {
         [self.delegate puchaseRequestFinish];
     }
@@ -92,22 +92,21 @@
 //[[SKPaymentQueue defaultQueue] addTransactionObserver:self];
 - (void)paymentQueue:(SKPaymentQueue *)queue updatedTransactions:(NSArray *)transactions//交易结果
 {
-    NSLog(@"-----paymentQueue--------");
     for (SKPaymentTransaction *transaction in transactions)
     {
         switch (transaction.transactionState)
         {
             case SKPaymentTransactionStatePurchased:{//交易完成
+                //-----交易完成 --------
                 [self completeTransaction:transaction];
-                NSLog(@"-----交易完成 --------");
                 if (self.delegate && [self.delegate respondsToSelector:@selector(puchaseSuccessWithUpdatedTransactions:)]) {
                     [self.delegate puchaseSuccessWithUpdatedTransactions:transactions];
                 }
             } break;
             case SKPaymentTransactionStateFailed://交易失败
             {
+                //-----交易失败 --------
                 [self failedTransaction:transaction];
-                NSLog(@"-----交易失败 --------");
                 if (self.delegate && [self.delegate respondsToSelector:@selector(puchaseFailWithUpdatedTransactions:)]) {
                     [self.delegate puchaseFailWithUpdatedTransactions:transactions];
                 }
@@ -115,15 +114,15 @@
             }break;
             case SKPaymentTransactionStateRestored://已经购买过该商品
             {
+                //-----已经购买过该商品 --------
                 [self restoreTransaction:transaction];
-                NSLog(@"-----已经购买过该商品 --------");
                 if (self.delegate && [self.delegate respondsToSelector:@selector(puchaseRestoredWithUpdatedTransactions:)]) {
                     [self.delegate puchaseRestoredWithUpdatedTransactions:transactions];
                 }
             }
                 break;
             case SKPaymentTransactionStatePurchasing:      //商品添加进列表
-                NSLog(@"-----商品添加进列表 --------");
+                //-----商品添加进列表 --------
                 break;
             default:
                 break;
@@ -133,7 +132,6 @@
 //-----------------------购买成功-----------------
 - (void) completeTransaction: (SKPaymentTransaction *)transaction
 {
-    NSLog(@"-----completeTransaction--------");
     // Your application should implement these two methods.
     NSString *product = transaction.payment.productIdentifier;
     if ([product length] > 0) {
