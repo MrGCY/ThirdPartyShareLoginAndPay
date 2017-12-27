@@ -11,7 +11,9 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
++ (AppDelegate *)appDelegate;
+//进入主控制器
+-(void)enterMainController;
 
 @end
 

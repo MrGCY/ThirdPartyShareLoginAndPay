@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,8 +19,66 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53b-an-COH">
+                    <rect key="frame" x="0.0" y="308.5" width="125" height="50"/>
+                    <state key="normal" image="login_qq"/>
+                    <connections>
+                        <action selector="clickQQLoginEvent:" destination="-1" eventType="touchUpInside" id="0Bn-ZT-rRu"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vKM-Hp-7It">
+                    <rect key="frame" x="250" y="308" width="125" height="50"/>
+                    <state key="normal" image="login_weixin"/>
+                    <connections>
+                        <action selector="clickWeixinLoginEvent:" destination="-1" eventType="touchUpInside" id="jJs-3t-vyx"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VXk-gK-9rh">
+                    <rect key="frame" x="15" y="458" width="345" height="40"/>
+                    <color key="backgroundColor" red="0.90196078430000004" green="0.38823529410000002" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="SD0-dX-Uc8"/>
+                    </constraints>
+                    <state key="normal" title="跳过">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="clickJumpEvent:" destination="-1" eventType="touchUpInside" id="ScF-jr-3hF"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z2-uN-VnT">
+                    <rect key="frame" x="125" y="308" width="125" height="50"/>
+                    <state key="normal" image="shortVideo_share_weibo"/>
+                    <connections>
+                        <action selector="clickWeiBoLoginEvent:" destination="-1" eventType="touchUpInside" id="u9I-uj-t48"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1Z2-uN-VnT" firstAttribute="width" secondItem="53b-an-COH" secondAttribute="width" id="0SK-Ve-p5G"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="VXk-gK-9rh" secondAttribute="trailing" constant="15" id="Bqg-yE-R82"/>
+                <constraint firstItem="53b-an-COH" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Eh5-BR-NGR"/>
+                <constraint firstItem="VXk-gK-9rh" firstAttribute="top" secondItem="1Z2-uN-VnT" secondAttribute="bottom" constant="100" id="Qoi-kk-7xM"/>
+                <constraint firstItem="1Z2-uN-VnT" firstAttribute="height" secondItem="53b-an-COH" secondAttribute="height" id="RMH-co-cnT"/>
+                <constraint firstItem="vKM-Hp-7It" firstAttribute="leading" secondItem="1Z2-uN-VnT" secondAttribute="trailing" id="WdS-Lv-MIp"/>
+                <constraint firstItem="vKM-Hp-7It" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XHq-5h-POe"/>
+                <constraint firstItem="vKM-Hp-7It" firstAttribute="height" secondItem="53b-an-COH" secondAttribute="height" id="XKg-oF-uJ8"/>
+                <constraint firstItem="1Z2-uN-VnT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="XaS-F7-m5l"/>
+                <constraint firstItem="53b-an-COH" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Z4h-6M-Hki"/>
+                <constraint firstItem="VXk-gK-9rh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="no2-q9-mwO"/>
+                <constraint firstItem="vKM-Hp-7It" firstAttribute="width" secondItem="53b-an-COH" secondAttribute="width" id="osG-uI-8ph"/>
+                <constraint firstItem="1Z2-uN-VnT" firstAttribute="leading" secondItem="53b-an-COH" secondAttribute="trailing" id="qFy-7i-glf"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="vKM-Hp-7It" secondAttribute="trailing" id="tWz-eO-nAs"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="-265" y="26"/>
         </view>
     </objects>
+    <resources>
+        <image name="login_qq" width="49" height="49"/>
+        <image name="login_weixin" width="49" height="49"/>
+        <image name="shortVideo_share_weibo" width="50" height="50"/>
+    </resources>
 </document>

@@ -10,6 +10,8 @@
 #import "CYMainTabBarViewController.h"
 #import "ThirdPartyLoginAndShareManager.h"
 #import "AlipayTool.h"
+#import "CYLoginViewController.h"
+#import "CYBaseNavigationViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -18,13 +20,36 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     //注册微信 QQ 微博
     [[ThirdPartyLoginAndShareManager sharedInstance] thirdPartyApplication:application didFinishLaunchingWithOptions:launchOptions];
-    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [CYMainTabBarViewController new];
+    self.window.rootViewController = [[CYBaseNavigationViewController alloc] initWithRootViewController:[CYLoginViewController new]];
     [self.window makeKeyAndVisible];
     return YES;
+}
+#pragma mark -------------------- 初始化AppDelegate ------------------------
++ (AppDelegate *)appDelegate
+{
+    return (AppDelegate *)[[UIApplication sharedApplication] delegate];
+}
+//进入主控制器
+-(void)enterMainController{
+    [self restoreRootViewController:[CYMainTabBarViewController new]];
+}
+- (void)restoreRootViewController:(UIViewController *)rootViewController{
+    typedef void (^Animation)(void);
+    UIWindow* window = self.window;
+    Animation animation = ^{
+        BOOL oldState = [UIView areAnimationsEnabled];
+        [UIView setAnimationsEnabled:NO];
+        window.rootViewController = rootViewController;
+        [UIView setAnimationsEnabled:oldState];
+    };
+    [UIView transitionWithView:window
+                      duration:0.5f
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:animation
+                    completion:nil];
 }
 #pragma mark --------------------三方登录分享相关---------------------------------
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation

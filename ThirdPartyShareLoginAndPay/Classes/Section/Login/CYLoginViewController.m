@@ -7,7 +7,7 @@
 //
 
 #import "CYLoginViewController.h"
-
+#import "AppDelegate.h"
 @interface CYLoginViewController ()
 
 @end
@@ -16,7 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.title = @"登录";
+}
+- (IBAction)clickQQLoginEvent:(UIButton *)sender {
+    
+}
+- (IBAction)clickWeiBoLoginEvent:(UIButton *)sender {
+    
+}
+- (IBAction)clickWeixinLoginEvent:(UIButton *)sender {
+    
+}
+- (IBAction)clickJumpEvent:(UIButton *)sender {
+    [[AppDelegate appDelegate] enterMainController];
 }
 
 @end
