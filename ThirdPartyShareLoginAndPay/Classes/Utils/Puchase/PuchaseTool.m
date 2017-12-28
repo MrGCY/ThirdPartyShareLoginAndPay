@@ -42,8 +42,7 @@
 #pragma mark- SKProductsRequestDelegate
 //收到的产品信息
 - (void)productsRequest:(SKProductsRequest *)request didReceiveResponse:(SKProductsResponse *)response{
-    
-    NSLog(@"-----------收到产品反馈信息--------------");
+    //-----------收到产品反馈信息--------------
     NSArray *myProduct = response.products;
     NSLog(@"产品Product ID:%@",response.invalidProductIdentifiers);
     NSLog(@"产品付费数量: %d", (int)[myProduct count]);
@@ -57,7 +56,7 @@
         NSLog(@"Product id: %@" , product.productIdentifier);
     }
     SKPayment *payment = [SKPayment paymentWithProduct:(SKProduct *)myProduct.firstObject];
-    NSLog(@"---------发送购买请求------------");
+    //---------发送购买请求------------
     [[SKPaymentQueue defaultQueue] addPayment:payment];
     
 }
@@ -83,7 +82,7 @@
     }
 }
 -(void) PurchasedTransaction: (SKPaymentTransaction *)transaction{
-    NSLog(@"-----PurchasedTransaction----");
+    //-----PurchasedTransaction----
     NSArray *transactions =[[NSArray alloc] initWithObjects:transaction, nil];
     [self paymentQueue:[SKPaymentQueue defaultQueue] updatedTransactions:transactions];
 }
