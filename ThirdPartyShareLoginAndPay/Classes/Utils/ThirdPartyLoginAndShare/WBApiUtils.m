@@ -48,7 +48,7 @@
     return [WeiboSDK registerApp:KWBAPPID];
 }
 //是否安装微博
-- (BOOL)isWXAppInstalled
+- (BOOL)isWBAppInstalled
 {
     return [WeiboSDK isWeiboAppInstalled];
 }

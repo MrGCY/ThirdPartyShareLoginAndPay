@@ -32,7 +32,7 @@
 //向微博注册
 -(BOOL)WBRegister:(BOOL)enabled;
 //是否安装微博
-- (BOOL)isWXAppInstalled;
+- (BOOL)isWBAppInstalled;
 //移除代理
 - (void)delegateDealloc;
 //分享图片
