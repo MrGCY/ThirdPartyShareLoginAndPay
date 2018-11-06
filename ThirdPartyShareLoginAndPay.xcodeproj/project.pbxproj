@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		21DECD9FD13BF9D9589EF9C0 /* libPods-ThirdPartyShareLoginAndPayUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E58D42FFD5E5AE8FA08473E5 /* libPods-ThirdPartyShareLoginAndPayUITests.a */; };
+		41D49B0221912D9A00D2A6E2 /* PuchaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 41D49B0121912D9900D2A6E2 /* PuchaseTool.m */; };
 		428480E418EBD2EC0CEB1641 /* libPods-ThirdPartyShareLoginAndPayTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A6CEB5D976D8285796FB48A5 /* libPods-ThirdPartyShareLoginAndPayTests.a */; };
 		5D326329308F9D4078714BF5 /* libPods-ThirdPartyShareLoginAndPay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC48360F2D82AA7C923D988 /* libPods-ThirdPartyShareLoginAndPay.a */; };
 		7E66E5921FF334D9006E4245 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E5911FF334D9006E4245 /* AppDelegate.m */; };
@@ -77,7 +78,6 @@
 		7E66E6F31FF37C37006E4245 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E66E6F21FF37C37006E4245 /* Foundation.framework */; };
 		7E66E6F81FF38929006E4245 /* CYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6F61FF38929006E4245 /* CYLoginViewController.m */; };
 		7E66E6F91FF38929006E4245 /* CYLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E66E6F71FF38929006E4245 /* CYLoginViewController.xib */; };
-		7E66E6FD1FF38E8A006E4245 /* PuchaseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E66E6FC1FF38E8A006E4245 /* PuchaseTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +100,8 @@
 /* Begin PBXFileReference section */
 		09968527EC6B6DE2950B316D /* Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayUITests/Pods-ThirdPartyShareLoginAndPayUITests.release.xcconfig"; sourceTree = "<group>"; };
 		0D5E71FBF10C0068CA3C211F /* Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPayTests/Pods-ThirdPartyShareLoginAndPayTests.release.xcconfig"; sourceTree = "<group>"; };
+		41D49B0021912D9900D2A6E2 /* PuchaseTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PuchaseTool.h; sourceTree = "<group>"; };
+		41D49B0121912D9900D2A6E2 /* PuchaseTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PuchaseTool.m; sourceTree = "<group>"; };
 		7E66E58D1FF334D9006E4245 /* ThirdPartyShareLoginAndPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThirdPartyShareLoginAndPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E66E5901FF334D9006E4245 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7E66E5911FF334D9006E4245 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -290,8 +292,6 @@
 		7E66E6F51FF38929006E4245 /* CYLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CYLoginViewController.h; sourceTree = "<group>"; };
 		7E66E6F61FF38929006E4245 /* CYLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CYLoginViewController.m; sourceTree = "<group>"; };
 		7E66E6F71FF38929006E4245 /* CYLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CYLoginViewController.xib; sourceTree = "<group>"; };
-		7E66E6FB1FF38E8A006E4245 /* PuchaseTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PuchaseTool.h; sourceTree = "<group>"; };
-		7E66E6FC1FF38E8A006E4245 /* PuchaseTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PuchaseTool.m; sourceTree = "<group>"; };
 		8CC48360F2D82AA7C923D988 /* libPods-ThirdPartyShareLoginAndPay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThirdPartyShareLoginAndPay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6CEB5D976D8285796FB48A5 /* libPods-ThirdPartyShareLoginAndPayTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ThirdPartyShareLoginAndPayTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04C9B0EDB9568CA220201FF /* Pods-ThirdPartyShareLoginAndPay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ThirdPartyShareLoginAndPay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ThirdPartyShareLoginAndPay/Pods-ThirdPartyShareLoginAndPay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -824,8 +824,8 @@
 		7E66E6FA1FF38E56006E4245 /* Puchase */ = {
 			isa = PBXGroup;
 			children = (
-				7E66E6FB1FF38E8A006E4245 /* PuchaseTool.h */,
-				7E66E6FC1FF38E8A006E4245 /* PuchaseTool.m */,
+				41D49B0021912D9900D2A6E2 /* PuchaseTool.h */,
+				41D49B0121912D9900D2A6E2 /* PuchaseTool.m */,
 			);
 			path = Puchase;
 			sourceTree = "<group>";
@@ -1199,7 +1199,7 @@
 				7E66E62D1FF360AA006E4245 /* UIColor+Hex.m in Sources */,
 				7E66E62B1FF360AA006E4245 /* UIBarButtonItem+QU.m in Sources */,
 				7E66E6DC1FF37AD4006E4245 /* payRequsestHandler.mm in Sources */,
-				7E66E6FD1FF38E8A006E4245 /* PuchaseTool.m in Sources */,
+				41D49B0221912D9A00D2A6E2 /* PuchaseTool.m in Sources */,
 				7E66E6551FF36738006E4245 /* NetWorkManager.m in Sources */,
 				7E66E62F1FF360AA006E4245 /* UIImage+GIF.m in Sources */,
 				7E66E5CA1FF34404006E4245 /* CYBaseViewController.m in Sources */,
